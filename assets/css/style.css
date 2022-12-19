@@ -1,0 +1,371 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.389), rgba(0, 0, 0, 0.389)), url(/assets/img/wallpaper/house-g6e5a0b11c_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.banner header nav{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+}
+
+header nav .burg ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    font-weight: bolder;
+}
+
+header nav .burg ul li a{
+    text-decoration: none;
+    color: blanchedalmond;
+}
+
+header nav .burg ul li::after{
+    content: '';
+    height: 5px;
+    width: 0;
+    background: green;
+    position: absolute;
+    Right: 0;
+    bottom: -10px;
+    transition: 0.7s;
+}
+
+header nav .burg ul li::before{
+    content: '';
+    height: 5px;
+    width: 0;
+    background: green;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.56s;
+} 
+
+header nav .burg ul li:hover::before{
+    width: 50%;
+}
+
+header nav .burg ul li:hover::after{
+    width: 50%;
+}
+
+.firstS{
+    position: absolute;
+    color: blanchedalmond;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+}
+
+.firstS h1{
+    margin-top: 70px;
+    font-size: 70px; 
+    
+}
+
+.firstS p{
+    margin: 20px auto;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.secondS{
+    width: 100%;
+    height: 50vh;
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: relative;
+}
+
+.secondS h1{
+    position: absolute;
+    top: 0.25%;
+    color: green;
+}
+
+
+article{
+    width: 25%;
+    height: 35vh;
+    background-color: black;
+    margin: 40px;
+    border: 1px;
+    border-radius: 25px;
+    color: blanchedalmond;
+    position: relative;
+    transition: 1.2s;
+}
+
+.art1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.389), rgba(0, 0, 0, 0.389)), url(/assets/img/pics/garden-g63f97a256_640.jpg);
+    overflow: hidden;
+}
+
+.art2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.389), rgba(0, 0, 0, 0.389)), url(/assets/img/pics/rhododendron-g81460d4e3_640.jpg);
+    overflow: hidden;
+}
+
+.art3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.389), rgba(0, 0, 0, 0.389)), url(/assets/img/pics/lawn-mower-g84a0879de_640.jpg);
+    overflow: hidden;
+}
+
+.butt{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 25px;
+    background: white;
+    font-weight: bold;
+    margin: 20px 10px;
+    color: green;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+
+#burger{
+    display: none;
+}
+
+span{
+    width: 0%;
+    height: 100%;
+    background: green;
+    position: absolute;
+    border-radius: 25px;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.butt:hover span{
+    width: 100%;
+    transition: 0.7s;
+}
+
+.butt:hover{
+    background: transparent;
+    color: white;
+    border: 0;
+}
+
+.thirdS{
+    width: 100%;
+    height: 80vh;
+    background-color: #beb29f;
+    position: relative;
+    overflow: hidden;
+}
+
+.carou{
+    height: 500px;
+    width: 1280px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    /*justify-content: center;
+    align-content: center; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+
+
+.carou .pics{
+    display: flex;
+
+    height: 500px;
+    width: 6400px;
+    transform: translate(0px);
+    transition: all;
+    -webkit-transition: ease-in-out 1.5s;
+    
+}
+
+.pics img{
+    width: 1280px;
+    object-fit: cover;
+}
+
+.left{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.right{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0%;
+}
+
+.card-body{
+    background-color: rgba(0, 128, 0, 0.137);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 25px;
+    backdrop-filter: blur(3px);
+    align-items: center;
+    right: -100%;
+    transition: 0.8s;
+}
+
+.description{
+    padding-left: 15px;
+}
+
+.subtitle{
+   padding-left: 15px;
+}
+
+.card-body h3{
+    padding-left: 15px;
+}
+
+.card-body a img{
+    height: 50px;
+    width: 130px;
+    padding-left: 15px;
+}
+
+.card-body .card-btn{
+    cursor: pointer;
+    /* padding-left: 15px; */
+}
+
+article:hover .card-body{
+    right: 0%;
+}
+
+article:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+@media screen and (max-width: 800px) {
+    .firstS{
+        display: block;
+        z-index: 0;
+    }
+
+    .test{
+        display: none;
+    }
+
+    header nav .burg ul li:hover::before{
+        width: 0%;
+    }
+
+    header nav .burg ul li:hover::after{
+        width: 0%;
+    }
+
+    #burger{
+        display: inline-block;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        z-index: 2;
+        right: 2%;
+    }
+
+    .burg{
+        height: 100vh;
+        width: 0%;
+        position: fixed;
+        background-color: green;
+        inset: 0 0 0 auto;
+        transition: 0.8s;
+        z-index: 1;
+    }
+
+    .full{
+        width: 100%;
+    }
+
+    .nothing{
+        width: 0%;
+    }
+
+    .burg ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .burg ul li{
+        padding: 10vh;
+    }
+
+    article{
+        width: 70%;
+        height: 35vh;
+        margin: 10px;
+    }
+
+    .secondS{
+        width: 100%;
+        height: 100vh;
+        background-color: blanchedalmond;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .firstS h1{
+        margin-top: 70px;
+        font-size: 2rem; 
+        
+    }
+
+}
+
+
